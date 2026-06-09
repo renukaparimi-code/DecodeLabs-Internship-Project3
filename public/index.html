@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Student Management Portal</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>🎓 Smart Student Management Portal</h1>
+        <p>Full Stack Database Integration Project</p>
+    </header>
+
+    <div class="dashboard">
+
+        <div class="card">
+            <h3>Total Students</h3>
+            <h2 id="studentCount">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Departments</h3>
+            <h2 id="deptCount">0</h2>
+        </div>
+
+    </div>
+
+    <div class="form-section">
+
+        <h2>Add Student</h2>
+
+        <input
+        type="text"
+        id="name"
+        placeholder="Student Name">
+
+        <input
+        type="text"
+        id="roll"
+        placeholder="Roll Number">
+
+        <select id="department">
+            <option>CSE</option>
+            <option>ECE</option>
+            <option>EEE</option>
+            <option>MECH</option>
+            <option>CIVIL</option>
+        </select>
+
+        <button onclick="addStudent()">
+            Add Student
+        </button>
+
+    </div>
+
+    <div class="search-section">
+
+        <input
+        type="text"
+        id="search"
+        placeholder="Search Student..."
+        onkeyup="searchStudent()">
+
+    </div>
+
+    <div class="table-section">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Name</th>
+                    <th>Roll</th>
+                    <th>Department</th>
+                    <th>Action</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="studentTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="chart-box">
+
+        <canvas id="deptChart"></canvas>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
